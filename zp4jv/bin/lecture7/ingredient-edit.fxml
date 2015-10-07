@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+
+<GridPane fx:controller="lecture7.IngredientEditController" xmlns:fx="http://javafx.com/fxml/1" alignment="center" vgap="10" hgap="20">
+	<Text text="Přidání/editace ingredience" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2" style="-fx-font-size: 16pt;"/>
+	
+	<Text text="Počet:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+	<TextField fx:id="txtAmount" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+	 
+	<Text text="Jednotka:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+	<TextField fx:id="txtUnit" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+	
+	<Text text="Název:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+	<TextField fx:id="txtName" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+	
+	<HBox GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2" alignment="CENTER_RIGHT" spacing="10">
+		<Button text="Ok" defaultButton="true" onAction="#okBtnAction"/>
+		<Button text="Storno" cancelButton="true" onAction="#cancelBtnAction"/>
+	</HBox>
+</GridPane>
+

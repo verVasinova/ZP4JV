@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ListView?>
+
+<BorderPane fx:controller="lecture7.RecipesMainController" xmlns:fx="http://javafx.com/fxml/1">
+	<top>
+		<MenuBar>
+			<Menu text="_Soubor" mnemonicParsing="true">
+				<MenuItem text="_New" mnemonicParsing="true" accelerator="ctrl+n"/>
+				<MenuItem text="_Konec" mnemonicParsing="true" onAction="#exitAction" accelerator="ctrl+x"/>
+			</Menu> 
+			<Menu text="_Recept" mnemonicParsing="true" >
+				<MenuItem text="_Přidat" mnemonicParsing="true" onAction="#addAction" accelerator="ctrl+a"/>
+				<MenuItem text="_Upravit" mnemonicParsing="true" onAction="#editAction" accelerator="ctrl+e"/>
+				<MenuItem text="_Odstranit" mnemonicParsing="true" onAction="#deleteAction" accelerator="ctrl+d"/>
+			</Menu>
+		</MenuBar>
+	</top>
+	<center>
+		<ListView fx:id="listRecipes" onMouseClicked="#listClickAction"/>
+	</center>
+</BorderPane>
+

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TextArea?>
+
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecture7.RecipeEditController" alignment="center" vgap="10" hgap="20">
+	<Text text="Přidání/editace receptu" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2" style="-fx-font-size: 16pt;"/>
+	
+	<Text text="Název:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+	<TextField fx:id="txtName" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+	 
+	<Text text="Počet porcí" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+	<TextField fx:id="txtServings" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+	
+	<Text text="Čas přípravy" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+	<TextField fx:id="txtCooktime" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+	
+	<TableView fx:id="table" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2">
+    	 <columns>
+          	<TableColumn  text="Počet"  prefWidth="90">
+          			<cellValueFactory><PropertyValueFactory property="amount" /> </cellValueFactory>
+          	</TableColumn>
+         	 <TableColumn text="Jednotka"  prefWidth="90">
+          			<cellValueFactory><PropertyValueFactory property="unit" /> </cellValueFactory>
+        	  </TableColumn>
+         	 <TableColumn text="Surovina" prefWidth="150">
+         	 		<cellValueFactory><PropertyValueFactory property="ingredient" /> </cellValueFactory>
+          	</TableColumn>
+     	</columns>    
+	</TableView>
+	
+	<HBox GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2" alignment="CENTER" spacing="10" >
+		<Button text="Přidat"   onAction="#addBtnAction"/>
+		<Button text="Upravit"   onAction="#editBtnAction"/>
+		<Button text="Smazat"  onAction="#deleteBtnAction"/>
+	</HBox>
+	
+	
+	<TextArea text=""  minHeight="80" fx:id="steps" GridPane.rowIndex="6" GridPane.columnIndex="0" GridPane.columnSpan="2" />
+	<Text text="" fx:id="lbNotification" GridPane.rowIndex="7" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+
+	<HBox GridPane.rowIndex="8" GridPane.columnIndex="0" GridPane.columnSpan="2" alignment="CENTER_RIGHT" spacing="10">
+		<Button text="Ok" defaultButton="true" onAction="#okBtnAction"/>
+		<Button text="Storno" cancelButton="true" onAction="#cancelBtnAction"/>
+	</HBox>
+</GridPane>
+

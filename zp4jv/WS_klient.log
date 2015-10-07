@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1250" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-04-21T20:50:50</date>
+  <millis>1429642250261</millis>
+  <sequence>0</sequence>
+  <logger>lecture7.RecipesMainController</logger>
+  <level>INFO</level>
+  <class>lecture7.RecipesMainController</class>
+  <method>loadRecipes</method>
+  <thread>14</thread>
+  <message>načteno7položek</message>
+</record>
+</log>
+Dub 21, 2015 8:57:59 ODP. lecture7.RecipesMainController loadRecipes
+INFO: načteno7položek
+Dub 21, 2015 8:58:17 ODP. lecture7.RecipesMainController addAction
+WARNING: Nic neulozeno
